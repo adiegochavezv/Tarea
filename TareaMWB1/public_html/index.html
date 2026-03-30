@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Accesible y Validado</title>
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+    <form id="miFormulario" class="needs-validation" novalidate>
+        
+        <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required>
+            <div class="invalid-feedback">Por favor, ingresa un correo electrónico válido (debe incluir @).</div>
+        </div>
+
+        <div class="form-group">
+            <label for="opcion">Selecciona una opción</label>
+            <select id="opcion" name="opcion" required>
+                <option value="" disabled selected>Elige...</option>
+                <option value="1">Opción 1</option>
+                <option value="2">Opción 2</option>
+            </select>
+            <div class="invalid-feedback">Debes seleccionar una opción de la lista.</div>
+        </div>
+
+        <div class="form-group checkbox-group">
+            <input type="checkbox" id="terminos" name="terminos" required>
+            <label for="terminos">Acepto los términos y condiciones</label>
+        </div>
+        <div class="invalid-feedback" style="margin-bottom: 1rem;">Debes aceptar los términos para continuar.</div>
+
+        <button type="submit">Enviar formulario</button>
+    </form>
+
+    <div id="mensaje-exito">
+        <strong>¡Éxito!</strong> Formulario enviado correctamente.
+    </div>
+    <script src="assets/js/app.js" type="text/javascript"></script>
+   
+</body>
+</html>
